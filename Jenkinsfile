@@ -14,7 +14,7 @@ pipeline{
             steps {
                 echo "========== Start Test stage =========="
                 withCredentials([string(credentialsId: 'password123', variable: 'paswd')]){
-                    sh 'echo ${passwd}'
+                    sh 'echo ${paswd}'
                 }
                 sh 'hostname'
                 sh 'pwd'
