@@ -13,7 +13,7 @@ pipeline{
         stage("Test stage") {
             steps {
                 echo "========== Start Test stage =========="
-                Credentials([string(credentialsId: 'passwrod123', variable: 'paswd')]){
+                withCredentials([string(credentialsId: 'passwrod123', variable: 'paswd')]){
                     sh 'echo ${passwd}'
                 }
                 sh 'hostname'
